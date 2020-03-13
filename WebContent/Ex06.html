@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 폼</title>
+</head>
+<body>
+
+		<!-- input 태그 : 사용자에게 입력을 받을 데이터 양식을 설정하는 태그.
+		
+		* input 태그 속성
+		- autocomplete : 사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부
+										=>on(default) or off
+		- autofocus : 페이지가 로드될 때 자동으로 포커스를이동할지여부 확인.
+		- checked : 양식이 선택되었음을 표시할 지 여부 확인.
+								=> type 속성 값이 radio, checkbox인 경우만 사용 가능.
+		- disabled : 양식을 비활성화할지 여부 확인.
+		- max : 지정 가능한 최대값 설정
+					=> type 속성 값이 number일 경우만 사용 가능. min 속성보다 큰 값만 허용
+		- min :  지정 가능한 최소값 설정
+					=> type 속성 값이 number일 경우만 사용 가능. max 속성보다 작은 값만 허용
+		- maxlength : 입력 가능한 최대 문자 수 설정.
+									=> type 속성값이 text,email,password,tel,url 일 경우만 허용.
+		- multiple : 둘 이상의 값을 입력할 수 있는지 여부 설정.
+							=> type 속성 값이 email, file일 경우만 허용 가능. email일 경우 , 로 구분
+		- name : 양식의 이름을 설정.
+		- placeholder : 사용자가 입력할 값의 힌트 설정.
+									=> type  속성 값이 text,search,tel,url,email일 경우만 허용.
+		- readonly : 수정 불가능한 읽기 전용 설정.
+		- step : 유호한 증감 숫자 간격의 설정. => type 속성 값이 number,range일 경우만 사용.
+		- src : 이미지의 url 설정 => type 속성 값이  image일 경우만 사용.
+		- alt : 이미지의 대체 텍스트 설정 =>  type 속성 값이  image일 경우만 사용.
+		- type : 입력 받을 데이터의 종류 설정. - 아래에 해당 type에 대한 내용 다시 기술
+		- value : 양식의 초기 값 설정.
+		
+		
+		*데이터 종류(type)의 값(value)
+				-button : 일반 버튼 - onclick 속성은 자바스크립트 함수를 호출할 때 사용
+				-checkbox : 체크박스 - 여러 개 중 동시에 선택, 비선택 가능
+				-color : 색상 선택 - IE 지원불가
+				-email : 이메일 선택
+				-file : 파일 선택
+				-hidden : 보이지 않지만 전송할 양식 설정
+									=> 양식에는 보이지 않지만 값이 전달되는 양식
+				-image : 이미지 제출버튼
+				-number : 숫자 선택
+				-password : 비밀번호 입력 가능. - 입력된 내용이 안 보이는 형식
+				-radio : 라디오 버튼. - 여러 개 중 하나만 선택됨. => name은 동일한  name을 사용해야 함.
+				-range : 범위 컨트롤 지정 - max, min, step, value( 기본값) 속성 사용 가능
+				-reset : 초기화 하는 버튼. - 해당 form 범위 내의 모든 양식 값이 초기화됨.
+				-search : 검색 기능
+				-submit : 제출 버튼 기능. - form 태그 속성 중 action 페이지로 해당 값들을 전송
+				-tel : 전화번호 입력 기능
+				-text : 일반 텍스트 입력 기능.
+				-url : 절대  url 입력 기능.
+		--> 
+		
+	<h2>회원가입 로그인 화면</h2>
+	<h3>아이디와 비밀번호를 입력하세요ㅕ...</h3>
+	<form action="http://www.google.com">
+		<table border="1" cellspacing="0">
+			<tr>
+				<!--1행  -->
+				<th>아이디</th>
+				<!--1행1열  -->
+				<td>
+					<!--1행2열  --> <input type="text" autofocus> <input
+					type="button" value="중복확인">
+				</td>
+			</tr>
+
+			<tr><!--2행  -->
+				<th>비밀번호</th><!--2행1열  -->
+				<td>	<!--2행2열  --> 
+				<input type="password">
+				</td>
+			</tr>
+			
+			<tr><!-- 3행 -->
+				<td colspan="2" align="center"> <!--2 열 병합  -->
+						<input type="submit" value="로그인">&nbsp;&nbsp;&nbsp;
+						<input type="reset" value="다시작성">
+				</td>
+				</tr>
+				</table>
+	</form>
+	
+	<!--HTML의 특수 제어문자
+			- &nbsp;  : 공백을 만드는 문자.
+			- &lt; : 부등호(<).
+			- &gt; :부등호(>).
+			- &amp; : 엠퍼센트(&) 기호.
+			- &quot; : 쌍따옴표(").
+			- &#035; : sharp(#).
+			- &#039; : 홑따옴표(').
+	
+		  -->
+	
+	
+</body>
+</html>
